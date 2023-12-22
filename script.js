@@ -1,26 +1,26 @@
-// let userName = prompt("Please Enter your name to visit our website? ") 
-// window.onload = function(){
-//    let message ="Good Day"
-// //    let firstName = prompt("Please Enter Your First Name?")
-// //    let lastName = prompt("Please Enter Your Last Name?")
-// //    let fullName = firstName +" "+ lastName
-//    let banger ="!"
-//    document.getElementById("userName").innerHTML = message + " " + userName+ banger
-// }
+let userName = prompt("Please Enter your name to visit our website? ") 
+window.onload = function(){
+   let message ="Good Day"
+//    let firstName = prompt("Please Enter Your First Name?")
+//    let lastName = prompt("Please Enter Your Last Name?")
+//    let fullName = firstName +" "+ lastName
+   let banger ="!"
+   document.getElementById("userName").innerHTML = message + " " + userName+ banger
+}
 //---------------------Add Name in Storage---------------------//
 function addNameInStorage(){
    let newName = prompt("Enter your name")
-   var names = localStorage.getItem('users')   // value ai gi string m
+   var names = localStorage.getItem('users')   
      
    if(names == null){
       names = []
    } else {
-      names = JSON.parse(names)  //string ko number->array m karnt ky laiy
+      names = JSON.parse(names)  
    }
    // console.log(typeof names)
    names.push(newName)
    console.log(names)
-   localStorage.setItem('users', JSON.stringify(names))  //stringify = number ko string m karny  k laiy
+   localStorage.setItem('users', JSON.stringify(names))  
    output.innerHTML = newName + " have been stored in storage."
 }
 //---------------------Print Names from Storage---------------------//
